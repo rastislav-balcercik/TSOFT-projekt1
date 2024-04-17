@@ -9,7 +9,8 @@
     "lint": "next lint",
     "selenium-test": "node ./src/tests/textChange.test.js",
     "selenium-e2e-test": "start-server-and-test dev http://localhost:3000 selenium-test",
-    "cypress-test": "cypress run --spec './src/tests'"
+    "cypress-test": "cypress run --spec './src/tests'",
+    "cypress-e2e-test": "start-server-and-test dev http://localhost:3000 cypress-test"
   },
   "dependencies": {
     "next": "14.2.1",

@@ -10,6 +10,7 @@ const {Builder, Browser, By } = require('selenium-webdriver');
     try {
     await driver.get('http://localhost:3000');
     const text = await driver.findElement(By.id('text')).getText();
+    console.log("Parsed text:" + text);
 
     // Kontrola či sa text zobrazuje správne
     if (text !== 'Rastislav Balcerčík') {
@@ -24,8 +25,10 @@ const {Builder, Browser, By } = require('selenium-webdriver');
     if (newText !== 'RB') {
       throw new Error('Text was not changed');
     }
+    console.log("New arsed text:" + newText);
+
   } finally {
     await driver.quit();
-    console.log('Test passed');
+    console.log('Test done');
   }
 })();
